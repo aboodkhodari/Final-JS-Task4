@@ -1,0 +1,396 @@
+/* =====================
+   BASE
+===================== */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(120deg, #eef2ff, #f8fafc);
+  color: #1f2933;
+}
+
+/* =====================
+   CONTAINER
+===================== */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+/* =====================
+   GRID
+===================== */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =====================
+   FORM SECTION (HORIZONTAL)
+===================== */
+.form-section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.form-section h2 {
+  margin-bottom: 16px;
+  color: #2563eb;
+}
+
+/* FORM GRID */
+#expense-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  align-items: end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.85rem;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+/* DESCRIPTION TAKES 2 COLUMNS */
+.form-group:last-of-type {
+  grid-column: span 2;
+}
+
+/* =====================
+   FORM ACTIONS
+===================== */
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =====================
+   BUTTON COLORS
+===================== */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #1f2933;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.btn-edit {
+  background: #facc15;
+  color: #1f2933;
+}
+
+/* =====================
+   SEARCH
+===================== */
+.search-section {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.search-section input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+/* =====================
+   EXPENSES
+===================== */
+.expenses-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.section-header h2 {
+  margin-bottom: 14px;
+  color: #1e40af;
+}
+
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* EXPENSE ITEM */
+.expense-item {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 14px;
+  border-radius: 12px;
+  background: #f9fafb;
+  border-left: 6px solid #2563eb;
+}
+
+.expense-name {
+  font-weight: 700;
+  color: #1f2933;
+}
+
+.expense-date,
+.expense-description {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.expense-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.expense-amount {
+  font-weight: 800;
+  color: #16a34a;
+  margin-right: 8px;
+}
+
+/* =====================
+   PAGINATION
+===================== */
+.pagination-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* =====================
+   EMPTY
+===================== */
+.empty-state {
+  padding: 30px;
+  text-align: center;
+  color: #9ca3af;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  #expense-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group:last-of-type {
+    grid-column: span 1;
+  }
+
+  .expense-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+/* =====================
+   THEME BUTTON
+===================== */
+.theme-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+/* =====================
+   THEME BUTTON
+===================== */
+.theme-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+/* =====================
+   DARK MODE
+===================== */
+body.dark {
+  background: linear-gradient(120deg, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+body.dark header h1 {
+  color: #e5e7eb;
+}
+
+body.dark .form-section,
+body.dark .search-section,
+body.dark .expenses-section {
+  background: #020617;
+  border-color: #1e293b;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #1e293b;
+}
+
+body.dark .expense-item {
+  background: #020617;
+  border-left-color: #38bdf8;
+}
+
+body.dark .expense-date,
+body.dark .expense-description {
+  color: #94a3b8;
+}
+
+body.dark .btn-secondary {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #1e293b;
+}
+
+body.dark footer {
+  color: #94a3b8;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.theme-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #1e3a8a;
+  color: #ffffff;
+}
+/* =====================
+   PAGE INFO
+===================== */
+.page-info {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+}
+
+body.dark .page-info {
+  color: #38bdf8;
+}
+/* =====================
+   PAGE NUMBERS
+===================== */
+.page-numbers {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.page-number {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: #e5e7eb;
+  color: #1f2933;
+}
+
+.page-number.active {
+  background: #2563eb;
+  color: white;
+}
+
+body.dark .page-number {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #1e293b;
+}
+
+body.dark .page-number.active {
+  background: #38bdf8;
+  color: #020617;
+}

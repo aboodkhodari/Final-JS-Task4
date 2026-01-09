@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker - Final Project Template</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>💰 Expense Tracker</h1>
+        <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+      </header>
+
+      <main>
+        <!-- Add/Edit Expense Form -->
+        <section class="form-section">
+          <h2 id="form-title">Add New Expense</h2>
+          <form id="expense-form">
+            <div class="form-group">
+              <label for="expense-name">Name *</label>
+              <input
+                type="text"
+                id="expense-name"
+                required
+                placeholder="e.g., Grocery Shopping"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="expense-date">Date *</label>
+              <input type="date" id="expense-date" required />
+            </div>
+
+            <div class="form-group">
+              <label for="expense-amount">Amount *</label>
+              <input
+                type="number"
+                id="expense-amount"
+                required
+                placeholder="0.00"
+                step="0.01"
+                min="0"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="expense-description">Description</label>
+              <textarea
+                id="expense-description"
+                rows="2"
+                placeholder="Optional details"
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="submit-btn">
+                Add Expense
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="cancel-btn"
+                style="display: none"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search expenses by name..."
+          />
+          <button class="btn btn-primary" id="search-btn">Search</button>
+        </section>
+
+        <!-- Expenses List -->
+        <section class="expenses-section">
+          <div class="section-header">
+            <h2>All Expenses</h2>
+          </div>
+
+          <!-- Expenses List -->
+          <div id="expenses-list" class="expenses-list">
+            <!-- Expenses will be inserted here -->
+          </div>
+
+          <!-- Pagination Buttons -->
+          <div class="pagination-buttons">
+            <button class="btn btn-secondary" id="prev-btn">← Previous</button>
+            <div id="page-numbers" class="page-numbers"></div>
+            <button class="btn btn-secondary" id="next-btn">Next →</button>
+          </div>
+        </section>
+        <div id="total-expenses"></div>
+        
+      </main>
+
+      <footer>
+        <p>Final Project Template - Convert to API Integration</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
